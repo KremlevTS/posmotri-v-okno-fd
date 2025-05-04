@@ -95,14 +95,13 @@ a {
 
 /* Основной контент */
 .content {
-  margin: 140px 45px 133px 0px;
+  margin-top: 136px;
+  margin-bottom: 133px;
 }
 
 .content__grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 30px;
-  height: calc(100% - 100px);
 }
 
 .result {
@@ -112,7 +111,7 @@ a {
 
 .result__video-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 соотношение */
+  padding-bottom: 52.25%;
   height: 0;
   overflow: hidden;
 }
@@ -134,9 +133,62 @@ a {
   align-items: start;
 }
 
-.content__video-card-title .content__video-card-description{
-
+.content__video-card:active,
+.button:active {
+  background-color:#545050;
 }
+
+button:hover,
+.content__video-card:hover,
+.search-form__label-text:hover
+{
+  text-decoration: underline;
+  text-decoration-color: white;
+  text-decoration-thickness: 2px;
+  cursor: pointer;
+}
+
+button,
+.content__video-card,
+.search-form__outline {
+  transition: border 0.2s ease;
+}
+
+button:focus-visible,
+.search-form__textfield:focus-visible,
+.content__video-card:focus-visible
+{
+  outline: 2px solid #fff;
+  border: 2px solid #fff;
+}
+
+.content__card-link:focus-visible {
+  box-shadow: inset 0 0 0 4px #fff;
+  position: relative;
+}
+
+.content__card-link {
+  display: block;
+  position: relative;
+  overflow: visible;
+}
+
+.content__card-link:focus-visible {
+  box-shadow: inset 0 0 0 2px #fff, 
+              0 0 0 2px #fff;
+  z-index: 1;
+}
+
+.search-form__checkbox:focus-visible + .search-form__pseudo-checkbox {
+  box-shadow: 0 0 0 2px #fff;
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
 
 .content__video-card-title {
   font-size: 30px;
@@ -160,7 +212,7 @@ a {
 .content__details {
   display: grid;
   grid-template-rows: auto 1fr;
-  gap: 20px;
+  gap: 35px;
 }
 
 .content__video-card-title{
@@ -173,14 +225,14 @@ a {
 .content__list-container {
   overflow-y: auto;
   max-width: 805px;
-  max-height: 341px;
+  max-height: 280px;
   overflow-x: hidden;
 }
 
 .content__list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 
 /* ОБНОВЛЕННЫЕ СТИЛИ ДЛЯ ФОРМЫ ПОИСКА */
@@ -234,7 +286,7 @@ a {
 }
 
 .search-form__fieldset-time{
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 /* Чекбоксы */
@@ -290,10 +342,9 @@ button {
 
 .search-form {
   display: flex;
-  gap: 40px;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 31.3px;
+  gap: 68px;
+  align-items: flex-end;
+  justify-content: flex-start;
 }
 
 .search-form__submit-button{
