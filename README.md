@@ -1,1 +1,1 @@
-https://github.com/KremlevTS/posmotri-v-okno-fd_KrTS
+https://github.com/KremlevTS/posmotri-v-okno-fd
