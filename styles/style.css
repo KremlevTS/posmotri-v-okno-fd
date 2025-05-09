@@ -1,4 +1,4 @@
-/*14:55*/
+/*18:32*/
 /* Общие стили */
 *,
 *::before,
@@ -283,7 +283,7 @@ a {
   text-decoration-thickness: 1px;
 }
 
-.search-form__label:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
@@ -320,13 +320,9 @@ button:active,
   pointer-events: none;
 }
 
-.search-form__checkbox:focus-visible + .search-form__pseudo-checkbox {
-  outline: 2px solid #fff;
-}
-
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
-  outline-offset: 0px;
+  outline-offset: 1px;
 }
 
 /* Скроллбар */
