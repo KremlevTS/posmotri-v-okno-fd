@@ -1,4 +1,4 @@
-/*17:06*/
+/*14:55*/
 /* Общие стили */
 *,
 *::before,
@@ -13,7 +13,7 @@ html {
 }
 
 .page {
-  inline-size: 1150px;
+  inline-size: 1200px;
   block-size: 100%;
   margin: auto;
   min-height: 100vh;
@@ -59,9 +59,8 @@ a {
   grid-template-areas: "video list";
   gap: 30px;
   width: 100%;
-  max-width: 1150px;
+  max-width: 1140px;
   margin: 0 auto;
-  padding-top: 90px;
 }
 
 /* Левая колонка (видео) */
@@ -177,7 +176,7 @@ a {
 /* Форма поиска */
 .search-form {
   display: flex;
-  gap: 35px;
+  gap: 40px;
   align-items: flex-start;
   font-family: 'Fira Sans Condensed', sans-serif;
 }
@@ -213,10 +212,14 @@ a {
   color: #fff;
   font-family: inherit;
   font-size: 18px;
-  width: 13em;
+  width: 12.5em;
   appearance: none;
   padding: 2px 0;
 }
+
+.search-form__textfield:focus {
+  outline: 0;
+ }
 
 .search-form__checkbox-list {
   display: flex;
@@ -266,6 +269,7 @@ a {
   width: 100%;
   padding: 6px 0;
   font-family: 'Fira Sans Condensed', sans-serif;
+  margin-top:30px;
 }
 
 /* Состояния */
@@ -274,8 +278,7 @@ a {
   text-decoration-thickness: 1px;
 }
 
-.card-link:hover .card-link__title,
-.card-link:hover .card-link__description {
+.content__card-link:hover {
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
@@ -292,8 +295,10 @@ button:active,
 
 .search-form__submit-button:focus-visible {
   outline: none;
-  box-shadow: inset 0 0 0 2px #fff, 
-              0 0 0 2px #fff;
+  box-shadow:
+    0 0 0 1px #fff,
+    0 0 0 2px #000,
+    0 0 0 3px #fff;
   z-index: 1;
 }
 
@@ -320,7 +325,8 @@ button:active,
 }
 
 .search-form__label:has(:focus-visible) {
-  outline: 2px solid #fff;
+  outline: 1px solid #fff;
+  outline-offset: 0px;
 }
 
 /* Скроллбар */
